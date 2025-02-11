@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ExpenseCategory"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--upper section-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FD5662"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--left arrow-->
+            <ImageButton
+                android:id="@+id/returnBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:contentDescription="return"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/return_arrow" />
+
+            <!--center title-->
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1.4"
+                android:gravity="center"
+                android:text="Expense"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <!--empty column-->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--lower section-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:background="#FBFBFB">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/l_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_food_dining" />
+
+                    <TextView
+                        android:id="@+id/b_1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Food &amp; Dining"
+                        android:textColor="#161719"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_2"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_food_dining" />
+
+                    <TextView
+                        android:id="@+id/b_2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Transportation"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_3"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_housing_rent" />
+
+                    <TextView
+                        android:id="@+id/b_3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Housing / Rent"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_4"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/expense_c_utilities" />
+
+                    <TextView
+                        android:id="@+id/b_4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Utilities"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_5"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_entertainment" />
+
+                    <TextView
+                        android:id="@+id/b_5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Entertainment"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_6"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_groceries" />
+
+                    <TextView
+                        android:id="@+id/b_6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Groceries"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_7"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_education" />
+
+                    <TextView
+                        android:id="@+id/b_7"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Education"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_8"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_travel" />
+
+                    <TextView
+                        android:id="@+id/b_8"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Travel"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_9"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_health_fitness" />
+
+                    <TextView
+                        android:id="@+id/b_9"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Health &amp; Fitness"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_10"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_personal_care" />
+
+                    <TextView
+                        android:id="@+id/b_10"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Personal Care"
+                        android:textColor="#161719"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_11"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_gifts_donation" />
+
+                    <TextView
+                        android:id="@+id/b_11"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Gifts &amp; Donations"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/l_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_round_white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/i_12"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:layout_gravity="center"
+                        android:src="@drawable/expense_c_others" />
+
+                    <TextView
+                        android:id="@+id/b_12"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Others"
+                        android:textColor="#161719" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

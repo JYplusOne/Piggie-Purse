@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Piggie Purse</string>
+    <string name="select_date_range_prompt">Select Date Range</string>
+</resources>

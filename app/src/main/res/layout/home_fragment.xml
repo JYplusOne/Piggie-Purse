@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeFragment"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+        <!--upper section-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#FCEED4"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--empty column-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" />
+
+                <!--center title-->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!--right icon-->
+                <ImageButton
+                    android:id="@+id/viewProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.5"
+                    android:contentDescription="return"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/home_page_profile" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/linear1">
+
+                <!--first row-->
+                <TextView
+                    android:id="@+id/accountBalanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Account Balance"
+                    android:textColor="#7A7E80"
+                    android:textSize="14sp" />
+
+                <!--second row-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp">
+
+                    <!-- mascot image overlap the linear layout -->
+                    <ImageView
+                        android:id="@+id/mascotImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:layout_gravity="right|bottom"
+                        android:src="@drawable/home_page_piggie"
+                        android:text="Overlap" />
+
+                    <LinearLayout
+                        android:id="@+id/innerLinear1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/balanceMyrText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="MYR"
+                            android:textColor="#161719"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/balanceMyrValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="0.00"
+                            android:textColor="#161719"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <!--third row-->
+                <LinearLayout
+                    android:id="@+id/innerLinear2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/inner2Linear1"
+                        android:layout_width="160dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_round_blue"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <!--first column-->
+                        <ImageView
+                            android:id="@+id/incomeImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/home_page_income_square" />
+
+                        <!--second column -->
+                        <LinearLayout
+                            android:id="@+id/inner3Linear1"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <!--first row-->
+                            <TextView
+                                android:id="@+id/incomeText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Income"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <!--second row-->
+                            <LinearLayout
+                                android:id="@+id/inner4Linear1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/incomeMyrText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="MYR"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/incomeMyrValue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="0.00"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/inner2Linear2"
+                        android:layout_width="160dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/bg_round_red"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:padding="10dp">
+
+                        <!--first column-->
+                        <ImageView
+                            android:id="@+id/expenseImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/home_page_expense_square" />
+
+                        <!--second column -->
+                        <LinearLayout
+                            android:id="@+id/inner3Linear2"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <!--first row-->
+                            <TextView
+                                android:id="@+id/expenseText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Expense"
+                                android:textColor="#FFFFFF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <!--second row-->
+                            <LinearLayout
+                                android:id="@+id/inner4Linear2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/expenseMyrText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="MYR"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="13sp" />
+
+                                <TextView
+                                    android:id="@+id/expenseMyrValue"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="0.00"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="13sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="match_parent"
+                android:layout_height="77dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/bg_round_upper_half_yellow"
+                app:layout_constraintTop_toBottomOf="@+id/linear2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/innerLinear3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:orientation="vertical">
+
+                    <!--first row-->
+                    <TextView
+                        android:id="@+id/budgetSettingText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Budget Setting"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                    <!--second row-->
+                    <TextView
+                        android:id="@+id/budgetSet"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Click here to set your budget"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:id="@+id/inner2Linear3"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="3dp"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/budgetProgressBar"
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            style="@style/ProgressBarStyle" />
+
+                    </LinearLayout>
+
+                    <!--third row-->
+                    <LinearLayout
+                        android:id="@+id/inner2Linear4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="horizontal"
+                        android:visibility="invisible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/budgetValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Budget:"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/budgetValueNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text=""
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+                            <TextView
+                                android:id="@+id/remainingBudgetValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Remaining:"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/remainingBudgetValueNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text=""
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--lower section-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@drawable/bg_round_white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/recentTransactionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recent Transaction"
+                    android:textColor="#161719"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/linear4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Spinner
+                        android:id="@+id/dropDownDateRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:entries="@array/date_range_options"
+                        android:prompt="@string/select_date_range_prompt" />
+
+                    <ImageView
+                        android:id="@+id/datePicker"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/home_page_calendar" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#7A7E80" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scroll"
+                android:layout_width="match_parent"
+                android:layout_height="265dp"
+                android:scrollbars="none"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintTop_toBottomOf="@+id/linear5"
+                android:contentDescription="transaction history">
+
+                <FrameLayout
+                    android:id="@+id/itemFragmentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </ScrollView>
+
+            <!--buttons overlapping scrollview -->
+            <!--yellow main add button -->
+            <ImageButton
+                android:id="@+id/addNewBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/home_page_add_button"
+                app:layout_constraintEnd_toEndOf="@+id/scroll"
+                app:layout_constraintBottom_toBottomOf="@+id/scroll"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="main add button"/>
+
+            <!--blue add income button -->
+            <ImageButton
+                android:id="@+id/addIncomeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/home_page_income_button"
+                app:layout_constraintEnd_toEndOf="@+id/scroll"
+                app:layout_constraintBottom_toBottomOf="@+id/scroll"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="80dp"
+                android:contentDescription="add income button"
+                android:visibility="invisible"/>
+
+            <!--red add  button -->
+            <ImageButton
+                android:id="@+id/addExpenseBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/home_page_expense_button"
+                app:layout_constraintEnd_toEndOf="@+id/scroll"
+                app:layout_constraintBottom_toBottomOf="@+id/scroll"
+                android:layout_marginBottom="80dp"
+                android:layout_marginRight="10dp"
+                android:contentDescription="add expense button"
+                android:visibility="invisible"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

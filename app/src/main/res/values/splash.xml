@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App.Starting" parent="Theme.PiggiePurse">
+        <!--Add background color of the splash screen-->
+        <item name="android:windowSplashScreenBackground">#F5C854</item>
+        <!--Add icon to be displayed-->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/logo</item>
+
+    </style>
+</resources>

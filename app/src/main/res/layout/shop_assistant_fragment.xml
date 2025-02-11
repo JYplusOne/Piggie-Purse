@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ShopAssistantFragment"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="#FBFBFB">
+
+    <!--upper section-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#F5C854"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--empty column-->
+            <TextView
+                android:id="@+id/pageTitle"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1.4"
+                android:gravity="center"
+                android:text="Sustainable Shopping Assistant"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ImageViewShop"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/Header1"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:src="@drawable/shop_pic" />
+
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/personalcareicon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/shop_personalcareicon"
+            android:scaleType="centerCrop"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"/>
+
+        <ImageButton
+            android:id="@+id/clothingapparelicon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/shop_clothingandapparelicon"
+            android:scaleType="centerCrop"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"/>
+
+        <ImageButton
+            android:id="@+id/foodgroceryicon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/shop_foodandgroceryicon"
+            android:scaleType="centerCrop"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"/>
+
+        <ImageButton
+            android:id="@+id/footwearicon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/shop_footwearicon"
+            android:scaleType="centerCrop"
+            android:layout_gravity="fill"
+            android:layout_margin="8dp"/>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/frag1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+    </LinearLayout>
+
+</LinearLayout>
+

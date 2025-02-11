@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="expenseColor">#FC5661</color>
+    <color name="incomeColor">#57A5FF</color>
+    <color name="budgetColor">#FAE5B1</color>
+
+    <color name="heading">#212325</color>
+    <color name="theme">#F5C854</color>
+    <color name="light_yellow">#FCEED4</color>
+    <color name="text">#91919F</color>
+</resources>
